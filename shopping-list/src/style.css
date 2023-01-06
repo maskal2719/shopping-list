@@ -1,0 +1,49 @@
+*:focus {
+    outline: none;
+}
+
+header, footer {
+    display: flex;
+    justify-content: center;
+    background: #b8ebe669;
+}
+
+.title {
+    font-size: 27px;
+    font-weight: bold;
+}
+
+main {
+    text-align: center;
+    padding: 15px 0px;
+}
+
+h1 {
+    letter-spacing: 10px;
+    color: darkturquoise;
+    margin: 0px 0px 15px 0px;
+    font-style: oblique;
+}
+
+input[type="text"] {
+    width: 200px;
+    padding: 15px;
+    margin-right: 10px;
+    border: none;
+    box-shadow: inset 0 0 10px rgb(0 0 0 / 32%), 0 0 10px rgb(0 0 0 / 36%);
+    background: rgba(255,255,255,0.5);
+}
+
+input:focus {
+    background-color: #f7f5e2;
+    border: none;
+}
+
+button {
+    margin: 0 0 10px 0;
+    padding: 15px;
+    border: none;
+    box-shadow: inset 0 0 10px rgb(0 0 0 / 32%), 0 0 10px rgb(0 0 0 / 36%);
+    background: #f7f5e2;
+    cursor: pointer;
+}

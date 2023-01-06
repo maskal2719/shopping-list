@@ -1,7 +1,11 @@
+import './style.css';
+
 export const Footer = () => {
     return (
         <div>
-            <footer>Footer</footer>
+            <footer>
+                <span className='title'>Footer</span>
+            </footer>
         </div>
     )
 }
