@@ -1,8 +1,12 @@
+import logo from './logo.svg';
+import './style.css';
+
 export const Header = () => {
     return (
         <div>
             <header>
-                <h1>Header</h1>
+                <img style={{width:'50px'}} src={logo} alt='logo'/>
+                <span className='title'>Header</span>
             </header>
         </div>
     )
