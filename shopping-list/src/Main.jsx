@@ -3,18 +3,15 @@ import {useState} from "react";
 
 export const Main = () => {
 
-    const [list, setItem] = useState(
-        [
-            {
-                id: 1,
-                title: 'Сахар'
-            },
-            {
-                id: 2,
-                title: 'Макароны'
-            }
-        ]
-    )
+    const [list, setItem] = useState([{
+        id: 1, title: 'Сахар', buy: true
+    }, {
+        id: 2, title: 'Макароны', buy: false,
+    },
+    {
+        id: 3, title: 'Чай', buy: false,
+    }
+])
 
     const [currentItem, setCurrentItem] = useState('');
 
@@ -26,31 +23,25 @@ export const Main = () => {
 
     const addItem = () => {
         const newItem = {
-            id: 3,
-            title: currentItem
+            id: 4, title: currentItem
         }
         setItem([newItem, ...list])
         setCurrentItem('');
     }
 
-    {console.log(list)}
-
-    return (
-        <div>
+    return (<div>
             <main>
                 <h1>Shopping list</h1>
                 <input value={currentItem} onChange={currentItemHandler} type="text"/>
                 <button onClick={addItem}>Add</button>
                 <div>
                     {list.map((el) => {
-                        return (
-                            <div>
-                                <p>{el.title}</p>
-                            </div>
-                        )
+                        return (<div>
+                                <input value={el.title}/>
+                                <button>Delete</button>
+                            </div>)
                     })}
                 </div>
             </main>
-        </div>
-    )
+        </div>)
 }
