@@ -3,15 +3,20 @@ import {useState} from "react";
 
 export const Main = () => {
 
-    const [list, setItem] = useState([{
-        id: 1, title: 'Сахар', buy: true
-    }, {
-        id: 2, title: 'Макароны', buy: false,
-    },
-    {
-        id: 3, title: 'Чай', buy: false,
-    }
-])
+    const [list, setItem] = useState([
+        {
+            id: 1, title: 'Сахар', buy: true
+        },
+        {
+            id: 2, title: 'Макароны', buy: false,
+        },
+        {
+            id: 3, title: 'Чай', buy: false,
+        },
+        {
+            id: 4, title: 'Молоко', buy: false
+        }
+    ])
 
     const [currentItem, setCurrentItem] = useState('');
 
@@ -30,18 +35,18 @@ export const Main = () => {
     }
 
     return (<div>
-            <main>
-                <h1>Shopping list</h1>
-                <input value={currentItem} onChange={currentItemHandler} type="text"/>
-                <button onClick={addItem}>Add</button>
-                <div>
-                    {list.map((el) => {
-                        return (<div>
-                                <input value={el.title}/>
-                                <button>Delete</button>
-                            </div>)
-                    })}
-                </div>
-            </main>
-        </div>)
+        <main>
+            <h1>Shopping list</h1>
+            <input value={currentItem} onChange={currentItemHandler} type="text"/>
+            <button onClick={addItem}>Add</button>
+            <div>
+                {list.map((el) => {
+                    return (<div>
+                        <input value={el.title}/>
+                        <button>Delete</button>
+                    </div>)
+                })}
+            </div>
+        </main>
+    </div>)
 }
