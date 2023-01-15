@@ -28,6 +28,9 @@ export const Main = () => {
         {
             id: 8, title: 'Желе', buy: false
         },
+        {
+            id: 9, title: 'Батон', buy: false
+        },
     ])
 
     const [currentItem, setCurrentItem] = useState('');
